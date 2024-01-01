@@ -77,6 +77,7 @@ static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 
 /* keybinds */
+#include "exitdwm.c"
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
@@ -95,8 +96,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} },
+	{ MODKEY|ShiftMask,             XK_q,      exitdwm,           {0} },
 	{ 0, XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
 	{ 0, XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
 	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },

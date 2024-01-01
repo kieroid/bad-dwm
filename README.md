@@ -9,7 +9,7 @@ patches
 * dwm-cfacts-vanitygaps
 * dwm-restartsig
 * dwm-centretitle
-
+* dwm-exitmenu
 
 installation
 ------------
