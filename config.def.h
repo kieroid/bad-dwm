@@ -30,7 +30,7 @@ static const unsigned int borderpx = 1;
 /* rules */
 static const char *colors[][3]      = { [SchemeNorm] = { col_w, col_b, col_g }, [SchemeSel]  = { col_b, col_w,  col_w  } }; 
 static const unsigned int alphas[][3]      = { [SchemeNorm] = { OPAQUE, baralpha, borderalpha }, [SchemeSel]  = { OPAQUE, baralpha, borderalpha } };
-static const Rule rules[] = { { NULL } };
+static const Rule rules[] = { { "krita", NULL, NULL, 0, 1, -1 } };
 #define FORCE_VSPLIT 1 /* nrowgrid layout: force two clients to always split vertically */
 
 
