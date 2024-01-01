@@ -12,6 +12,7 @@ patches
 * dwm-centretitle
 * dwm-exitmenu
 * dwm-focusonnetactive
+* dwm-fakefullscreen
 
 installation
 ------------
