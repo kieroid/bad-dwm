@@ -24,7 +24,7 @@ static const int topbar			= 1;		/* 0 means bottom bar */
 static const float mfact		= 0.5;		/* factor of master area size [0.05..0.95] */
 static const int nmaster		= 1;		/* number of clients in master area */
 static const int resizehints		= 1;		/* 1 means respect size hints in tiled resizals */
-static const int lockfullscreen		= 1;		/* 1 will force focus on the fullscreen window */
+static const int lockfullscreen		= 0;		/* 1 will force focus on the fullscreen window */
 static const unsigned int borderpx = 1;
 
 /* rules */
