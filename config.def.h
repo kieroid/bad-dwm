@@ -13,7 +13,7 @@ static const unsigned int borderalpha	= OPAQUE;			/* border transparency */
 
 /* options */
 static const char *tags[]		= { "1", "2", "3", "4", "5" };
-static const unsigned int snap		= 32;		/* snap pixel */
+static const unsigned int snap		= 5;		/* snap pixel */
 static const unsigned int gappih	= 12;		/* horiz inner gap between windows */
 static const unsigned int gappiv	= 12;		/* vert inner gap between windows */
 static const unsigned int gappoh	= 12;		/* horiz outer gap between windows and screen edge */
