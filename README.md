@@ -7,6 +7,9 @@ patches
 * dwm-combo
 * dwm-alpha
 * dwm-cfacts-vanitygaps
+* dwm-restartsig
+* dwm-centretitle
+
 
 installation
 ------------
