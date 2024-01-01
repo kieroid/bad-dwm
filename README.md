@@ -10,6 +10,7 @@ patches
 * dwm-restartsig
 * dwm-centretitle
 * dwm-exitmenu
+* dwm-focusonnetactive
 
 installation
 ------------
