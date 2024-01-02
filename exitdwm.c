@@ -4,30 +4,28 @@
 void exitdwm ()
 {
 # if							   \
-	defined S_LOCK				|| \
-	defined S_RESTART_DWM		|| \
+	defined S_RESTART_DWM			|| \
 	defined S_OFFSCREEN			|| \
 	defined S_EXIT				|| \
 	defined S_REBOOT			|| \
 	defined S_SHUTDOWN			|| \
 	defined S_LOCK_ICON			|| \
-	defined S_RESTART_DWM_ICON	|| \
-	defined S_OFFSCREEN_ICON	|| \
+	defined S_RESTART_DWM_ICON		|| \
+	defined S_OFFSCREEN_ICON		|| \
 	defined S_EXIT_ICON			|| \
-	defined S_REBOOT_ICON		|| \
-	defined S_SHUTDOWN_ICON		|| \
+	defined S_REBOOT_ICON			|| \
+	defined S_SHUTDOWN_ICON			|| \
 	defined S_FORMAT			|| \
 	defined S_FORMAT_CLEAR
 # error (conflicting macro names)
 # endif
 
-# define S_LOCK "Lock"
 # define S_RESTART_DWM "restart Dwm"
 # define S_OFFSCREEN "Off-screen"
 # define S_EXIT "Exit"
 # define S_REBOOT "Reboot"
 # define S_SHUTDOWN "Shutdown"
-# define S_LOCK_ICON "\uf023"			// <= FontAwesome icons
+// FontAwesome icons
 # define S_RESTART_DWM_ICON "\uf01e"
 # define S_OFFSCREEN_ICON "\uf108"
 # define S_EXIT_ICON "\uf2f5"
@@ -39,7 +37,6 @@ void exitdwm ()
 
 	FILE * exit_menu = popen (
 		"echo \""
-			S_FORMAT (LOCK) "\n"
 			S_FORMAT (RESTART_DWM) "\n"
 			S_FORMAT (OFFSCREEN) "\n"
 			S_FORMAT (EXIT) "\n"
@@ -60,17 +57,15 @@ void exitdwm ()
 		goto close_streams;
 	}
 
-	if (strcmp (exit_action, S_LOCK) == 0) system ("slock & sleep .5; xset dpms force off");
-	else if (strcmp (exit_action, S_RESTART_DWM) == 0) quit (& (const Arg) {1});
+	if (strcmp (exit_action, S_RESTART_DWM) == 0) quit (& (const Arg) {1});
 	else if (strcmp (exit_action, S_OFFSCREEN) == 0) system ("sleep .5; xset dpms force off");
 	else if (strcmp (exit_action, S_EXIT) == 0) quit (& (const Arg) {0});
-	else if (strcmp (exit_action, S_REBOOT) == 0) system ("systemctl reboot");
-	else if (strcmp (exit_action, S_SHUTDOWN) == 0) system ("systemctl poweroff -i");
+	else if (strcmp (exit_action, S_REBOOT) == 0) system ("sudo reboot");
+	else if (strcmp (exit_action, S_SHUTDOWN) == 0) system ("sudo poweroff -i");
 
 close_streams:
 	pclose (exit_menu);
 
-# undef S_LOCK
 # undef S_RESTART_DWM
 # undef S_OFFSCREEN
 # undef S_EXIT

@@ -97,14 +97,14 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
 	{ MODKEY|ShiftMask,             XK_q,      exitdwm,           {0} },
-	{ 0, XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
-	{ 0, XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
-	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
-	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
-	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
-	{ 0, XF86XK_AudioPlay, spawn, {.v = medplaypausecmd } },
-	{ 0, XF86XK_AudioNext, spawn, {.v = mednextcmd } },
-	{ 0, XF86XK_AudioPrev, spawn, {.v = medprevcmd } },
+	{ 0, 		XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
+	{ 0, 		XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
+	{ 0,		XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+	{ 0,		XF86XK_AudioMute, spawn, {.v = mutevol } },
+	{ 0,		XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
+	{ 0, 		XF86XK_AudioPlay, spawn, {.v = medplaypausecmd } },
+	{ 0, 		XF86XK_AudioNext, spawn, {.v = mednextcmd } },
+	{ 0, 		XF86XK_AudioPrev, spawn, {.v = medprevcmd } },
 };
 
 /* button definitions */
