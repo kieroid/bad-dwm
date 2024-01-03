@@ -76,6 +76,8 @@ static const char *mutemic[]	= { "/usr/bin/amixer", "set", "Capture", "toggle", 
 static const char *medplaypausecmd[] = { "playerctl", "play-pause", NULL };
 static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
+static const char *rotatescreen[] = { "special_rotate", NULL };
+static const char *togglekeys[] = { "special_keyboard", NULL };
 
 /* keybinds */
 #include "exitdwm.c"
@@ -107,6 +109,8 @@ static const Key keys[] = {
 	{ 0, 		XF86XK_AudioPlay, spawn, {.v = medplaypausecmd } },
 	{ 0, 		XF86XK_AudioNext, spawn, {.v = mednextcmd } },
 	{ 0, 		XF86XK_AudioPrev, spawn, {.v = medprevcmd } },
+	{ 0,		XF86XK_RotateWindows, spawn, {.v = rotatescreen } },
+	{ 0,		XF86XK_TaskPane, spawn, {.v = togglekeys } },
 };
 
 /* button definitions */
