@@ -13,6 +13,7 @@ patches
 * dwm-exitmenu
 * dwm-focusonnetactive
 * dwm-fakefullscreen
+* dwm-launcher
 
 installation
 ------------
