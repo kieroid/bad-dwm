@@ -32,8 +32,6 @@ static const char *colors[][3]      = { [SchemeNorm] = { col_w, col_b, col_g }, 
 static const unsigned int alphas[][3]      = { [SchemeNorm] = { OPAQUE, baralpha, borderalpha }, [SchemeSel]  = { OPAQUE, baralpha, borderalpha } };
 static const Rule rules[] = { { "krita", NULL, NULL, 0, 1, -1 } };
 #define FORCE_VSPLIT 1 /* nrowgrid layout: force two clients to always split vertically */
-
-
 #include "vanitygaps.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -78,6 +76,13 @@ static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 static const char *rotatescreen[] = { "special_rotate", NULL };
 static const char *togglekeys[] = { "special_keyboard", NULL };
+
+/* launcher commands */
+static const Launcher launchers[] = {
+	/* command	name to display */
+	{ dmenucmd,	"l" },
+	{ termcmd,	"t" },
+};
 
 /* keybinds */
 #include "exitdwm.c"
