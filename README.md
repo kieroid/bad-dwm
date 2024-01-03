@@ -14,6 +14,8 @@ patches
 * dwm-focusonnetactive
 * dwm-fakefullscreen
 * dwm-launcher
+* dwm-noborder
+* dwm-cyclelayouts
 
 installation
 ------------
