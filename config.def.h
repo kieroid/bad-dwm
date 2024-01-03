@@ -12,7 +12,7 @@ static const unsigned int baralpha	= 0xd0;				/* transparency */
 static const unsigned int borderalpha	= OPAQUE;			/* border transparency */
 
 /* options */
-static const char *tags[]		= { "1", "2", "3", "4", "5" };
+static const char *tags[]		= { "1", "2", "3", "4", "5", "6", "7" };
 static const unsigned int snap		= 5;		/* snap pixel */
 static const unsigned int gappih	= 12;		/* horiz inner gap between windows */
 static const unsigned int gappiv	= 12;		/* vert inner gap between windows */
@@ -105,6 +105,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
 	TAGKEYS(                        XK_5,                      4)
+	TAGKEYS(                        XK_6,                      5)
+	TAGKEYS(                        XK_7,                      6)
 	{ MODKEY|ShiftMask,             XK_q,      exitdwm,           {0} },
 	{ 0, 		XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
 	{ 0, 		XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
