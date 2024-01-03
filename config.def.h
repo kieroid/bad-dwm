@@ -99,6 +99,8 @@ static const Key keys[] = {
 	{ MODKEY,	                XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_w,      view,           {.ui = ~0 } },
 	{ MODKEY,	                XK_e,      tag,            {.ui = ~0 } },
+	{ MODKEY|ControlMask,           XK_comma,  cyclelayout,    {.i = -1 } },
+	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
