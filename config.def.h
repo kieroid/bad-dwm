@@ -35,12 +35,12 @@ static const Rule rules[] = { { "krita", NULL, NULL, 0, 1, -1 } };
 #include "vanitygaps.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
+	{ "[M]",      monocle},	
 	{ "[@]",      spiral },
 	{ "[]=",      tile },    /* first entry is default */
 	{ "[\\]",     dwindle },
 	{ "H[]",      deck },
 	{ "TTT",      bstack },
-	{ "[M]",      monocle},
 	{ "===",      bstackhoriz },
 	{ "HHH",      grid },
 	{ "###",      nrowgrid },
@@ -98,8 +98,6 @@ static const Key keys[] = {
 	{ MODKEY,	                XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_w,      view,           {.ui = ~0 } },
 	{ MODKEY,	                XK_e,      tag,            {.ui = ~0 } },
-	{ MODKEY|ControlMask,           XK_comma,  cyclelayout,    {.i = -1 } },
-	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -123,6 +121,9 @@ static const Key keys[] = {
 /* button definitions */
 static const Button buttons[] = {
 	/* click                event mask      button          function        argument */
+	{ ClkLtSymbol,		0,		Button1,	cyclelayout,	{.i = -1 } },
+	{ ClkLtSymbol,		0,		Button3,	cyclelayout,	{.i = +1 } },
+
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
