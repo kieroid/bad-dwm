@@ -25,14 +25,8 @@ void exitdwm ()
 # define S_EXIT "Exit"
 # define S_REBOOT "Reboot"
 # define S_SHUTDOWN "Shutdown"
-// FontAwesome icons
-# define S_RESTART_DWM_ICON "\uf01e"
-# define S_OFFSCREEN_ICON "\uf108"
-# define S_EXIT_ICON "\uf2f5"
-# define S_REBOOT_ICON "\uf021"
-# define S_SHUTDOWN_ICON "\uf011"
 
-# define S_FORMAT(ACTION) S_##ACTION##_ICON " " S_##ACTION
+# define S_FORMAT(ACTION) S_##ACTION
 # define S_FORMAT_CLEAR "sed 's/^..//'"
 
 	FILE * exit_menu = popen (
