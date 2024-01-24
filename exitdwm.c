@@ -65,12 +65,6 @@ close_streams:
 # undef S_EXIT
 # undef S_REBOOT
 # undef S_SHUTDOWN
-# undef S_LOCK_ICON
-# undef S_RESTART_DWM_ICON
-# undef S_OFFSCREEN_ICON
-# undef S_EXIT_ICON
-# undef S_REBOOT_ICON
-# undef S_SHUTDOWN_ICON
 # undef S_FORMAT
 # undef S_FORMAT_CLEAR
 }
