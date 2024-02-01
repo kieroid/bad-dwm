@@ -20,7 +20,7 @@ void exitdwm ()
 # error (conflicting macro names)
 # endif
 
-# define S_RESTART_DWM "restart Dwm"
+# define S_RESTART_DWM "Restart Dwm"
 # define S_OFFSCREEN "Off-screen"
 # define S_EXIT "Exit"
 # define S_REBOOT "Reboot"
