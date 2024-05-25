@@ -35,8 +35,8 @@ static const Rule rules[] = { { "krita", NULL, NULL, 0, 1, -1 } };
 #include "vanitygaps.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[M]",      monocle},	
-	{ "[@]",      spiral },
+	{ "[@]",      spiral},
+	{ "[M]",      monocle},	/*{ "[@]",      spiral },*/
 	{ "[]=",      tile },    /* first entry is default */
 	{ "[\\]",     dwindle },
 	{ "H[]",      deck },
@@ -65,11 +65,13 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run_history", "-fn", dmenufont, "-nb", col_b, "-nf", col_w, "-sb", col_w, "-sf", col_b, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *dmenunm[] = { "dmenu_nm", NULL };
 static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
 static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
 static const char *upvol[]      = { "/usr/bin/amixer",  "set", "Master", "5%+", NULL };
 static const char *downvol[]    = { "/usr/bin/amixer",  "set", "Master", "5%-", NULL };
 static const char *mutevol[]    = { "/usr/bin/amixer", "set", "Master", "toggle", NULL };
+static const char *micmute[]	= { "/usr/bin/amixer", "set", "Capture", "toggle", NULL };
 static const char *medplaypausecmd[] = { "playerctl", "play-pause", NULL };
 static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
@@ -81,6 +83,7 @@ static const Launcher launchers[] = {
 	/* command	name to display */
 	{ dmenucmd,	"l" },
 	{ termcmd,	"t" },
+	{ dmenunm,	"c" },
 };
 
 /* keybinds */
@@ -109,6 +112,7 @@ static const Key keys[] = {
 	{ 0, 		XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
 	{ 0, 		XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
 	{ 0,		XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
+	{ 0,		XF86XK_AudioMicMute, spawn, {.v = micmute } },
 	{ 0,		XF86XK_AudioMute, spawn, {.v = mutevol } },
 	{ 0,		XF86XK_AudioRaiseVolume, spawn, {.v = upvol } },
 	{ 0, 		XF86XK_AudioPlay, spawn, {.v = medplaypausecmd } },
