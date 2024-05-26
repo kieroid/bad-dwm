@@ -36,8 +36,8 @@ static const Rule rules[] = { { "krita", NULL, NULL, 0, 1, -1 } };
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[@]",      spiral},
-	{ "[M]",      monocle},	/*{ "[@]",      spiral },*/
-	{ "[]=",      tile },    /* first entry is default */
+	{ "[M]",      monocle},
+	{ "[]=",      tile },
 	{ "[\\]",     dwindle },
 	{ "H[]",      deck },
 	{ "TTT",      bstack },
@@ -48,7 +48,7 @@ static const Layout layouts[] = {
 	{ ":::",      gaplessgrid },
 	{ "|M|",      centeredmaster },
 	{ ">M>",      centeredfloatingmaster },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "><>",      NULL },
 	{ NULL,       NULL },
 };
 
@@ -56,10 +56,10 @@ static const Layout layouts[] = {
 #define MODKEY Mod4Mask
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                       KEY,      comboview,           {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
-	{ MODKEY|ShiftMask,             KEY,      combotag,            {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
+	{ MODKEY,                       KEY,      comboview, 		{.ui = 1 << TAG} }, \
+	{ MODKEY|ControlMask,           KEY,      toggleview,		{.ui = 1 << TAG} }, \
+	{ MODKEY|ShiftMask,             KEY,      combotag,		{.ui = 1 << TAG} }, \
+	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,		{.ui = 1 << TAG} },
 
 /* multimedia commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -77,67 +77,67 @@ static const char *mednextcmd[] = { "playerctl", "next", NULL };
 static const char *medprevcmd[] = { "playerctl", "previous", NULL };
 static const char *rotatescreen[] = { "special_rotate", NULL };
 static const char *togglekeys[] = { "special_keyboard", NULL };
+static const char *cmdprintscreen[]  = { "flameshot", "gui", NULL };
 
 /* launcher commands */
 static const Launcher launchers[] = {
 	/* command	name to display */
 	{ dmenucmd,	"l" },
 	{ termcmd,	"t" },
-	{ dmenunm,	"c" },
 };
 
 /* keybinds */
 #include "exitdwm.c"
 static const Key keys[] = {
-	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,	                XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY, 	                XK_Right,  focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_Left,   focusstack,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_Right,  incnmaster,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_Left,   incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY,	                XK_q,      killclient,     {0} },
-	{ MODKEY,	                XK_space,  togglefloating, {0} },
-	{ MODKEY,                       XK_w,      view,           {.ui = ~0 } },
-	{ MODKEY,	                XK_e,      tag,            {.ui = ~0 } },
-	TAGKEYS(                        XK_1,                      0)
-	TAGKEYS(                        XK_2,                      1)
-	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	{ MODKEY|ShiftMask,             XK_q,      exitdwm,           {0} },
-	{ 0, 		XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
-	{ 0, 		XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
-	{ 0,		XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
-	{ 0,		XF86XK_AudioMicMute, spawn, {.v = micmute } },
-	{ 0,		XF86XK_AudioMute, spawn, {.v = mutevol } },
-	{ 0,		XF86XK_AudioRaiseVolume, spawn, {.v = upvol } },
-	{ 0, 		XF86XK_AudioPlay, spawn, {.v = medplaypausecmd } },
-	{ 0, 		XF86XK_AudioNext, spawn, {.v = mednextcmd } },
-	{ 0, 		XF86XK_AudioPrev, spawn, {.v = medprevcmd } },
-	{ 0,		XF86XK_RotateWindows, spawn, {.v = rotatescreen } },
-	{ 0,		XF86XK_TaskPane, spawn, {.v = togglekeys } },
+	/* modifier                     key				function        argument */
+	{ MODKEY,                       XK_r,      			spawn,          {.v = dmenucmd } },
+	{ MODKEY,	                XK_Return, 			spawn,          {.v = termcmd } },
+	{ MODKEY, 	                XK_Right,  			focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_Left,   			focusstack,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_Right,  			incnmaster,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Left,   			incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_Tab,    			view,           {0} },
+	{ MODKEY,	                XK_q,      			killclient,     {0} },
+	{ MODKEY,	                XK_space,  			togglefloating, {0} },
+	{ MODKEY,                       XK_w,      			view,           {.ui = ~0 } },
+	{ MODKEY,	                XK_e,      			tag,            {.ui = ~0 } },
+	TAGKEYS(                        XK_1,           		           	0)
+	TAGKEYS(                        XK_2,           		           	1)
+	TAGKEYS(                        XK_3,           		           	2)
+	TAGKEYS(                        XK_4,           		           	3)
+	TAGKEYS(                        XK_5,           		           	4)
+	TAGKEYS(                        XK_6,           		           	5)
+	TAGKEYS(                        XK_7,           		           	6)
+	{ MODKEY|ShiftMask,             XK_q,      			exitdwm,        {0} },
+	{ 0,				XK_Print,			spawn,		{.v = cmdprintscreen } },
+	{ 0, 				XF86XK_MonBrightnessUp,  	spawn,          {.v = brupcmd} },
+	{ 0, 				XF86XK_MonBrightnessDown,	spawn,          {.v = brdowncmd} },
+	{ 0,				XF86XK_AudioLowerVolume, 	spawn, 		{.v = downvol } },
+	{ 0,				XF86XK_AudioMicMute, 		spawn, 		{.v = micmute } },
+	{ 0,				XF86XK_AudioMute, 		spawn, 		{.v = mutevol } },
+	{ 0,				XF86XK_AudioRaiseVolume, 	spawn, 		{.v = upvol } },
+	{ 0, 				XF86XK_AudioPlay, 		spawn, 		{.v = medplaypausecmd } },
+	{ 0, 				XF86XK_AudioNext, 		spawn, 		{.v = mednextcmd } },
+	{ 0, 				XF86XK_AudioPrev, 		spawn, 		{.v = medprevcmd } },
+	{ 0,				XF86XK_RotateWindows, 		spawn, 		{.v = rotatescreen } },
+	{ 0,				XF86XK_TaskPane, 		spawn, 		{.v = togglekeys } },
 };
 
 /* button definitions */
 static const Button buttons[] = {
-	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,		0,		Button1,	cyclelayout,	{.i = -1 } },
-	{ ClkLtSymbol,		0,		Button3,	cyclelayout,	{.i = +1 } },
-
-	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
-	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-	{ ClkTagBar,            0,              Button1,        view,           {0} },
-	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
-	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+	/* click                	event mask      button          function        argument */
+	{ ClkLtSymbol,			0,		Button1,	cyclelayout,	{.i = -1 } },
+	{ ClkLtSymbol,			0,		Button3,	cyclelayout,	{.i = +1 } },
+	{ ClkTagBar,            	MODKEY,         Button1,        tag,            {0} },
+	{ ClkTagBar,            	MODKEY,         Button3,        toggletag,      {0} },
+	{ ClkWinTitle,          	0,              Button2,        zoom,           {0} },
+	{ ClkStatusText,        	0,              Button2,        spawn,          {.v = termcmd } },
+	{ ClkClientWin,         	MODKEY,         Button1,        movemouse,      {0} },
+	{ ClkClientWin,         	MODKEY,         Button2,        togglefloating, {0} },
+	{ ClkClientWin,         	MODKEY,         Button3,        resizemouse,    {0} },
+	{ ClkTagBar,            	0,              Button1,        view,           {0} },
+	{ ClkTagBar,            	0,              Button3,        toggleview,     {0} },
+	{ ClkTagBar,            	MODKEY,         Button1,        tag,            {0} },
+	{ ClkTagBar,            	MODKEY,         Button3,        toggletag,      {0} },
 };
 
