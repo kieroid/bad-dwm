@@ -25,7 +25,8 @@ patches
 installation
 ------------
 edit config.mk to match your system<br/>
-type `doas make install` to build dmenu, then install.
+type `make install` to build dmenu, then install.<br/>
+to run, type `dwm` or put it within your `.xinitrc` file and type `startx`.
 
 credits
 -------
