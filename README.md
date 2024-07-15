@@ -1,4 +1,4 @@
-suckless dwm
+bad dwm
 ============================
 simple fork of dwm-6.4 with the patches that i used pre-applied.
 
