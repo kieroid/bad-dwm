@@ -10,6 +10,7 @@ screenshot
 patches
 ------------
 * dwm-status2d-systray
+* dwm-combo
 
 installation
 ------------
