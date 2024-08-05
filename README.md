@@ -17,6 +17,7 @@ patches
 * dwm-centretitle
 * dwm-cyclelayouts
 * dwm-noborderfloatingfix
+* dwm-fakefullscreen
 
 installation
 ------------
