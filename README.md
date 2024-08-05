@@ -9,15 +9,7 @@ screenshot
 
 patches
 ------------
-* dwm-status2d-systray
-* dwm-combo
-* dwm-alpha
-* dwm-cfacts-vanitygaps
-* dwm-restartsig
-* dwm-centretitle
-* dwm-cyclelayouts
-* dwm-noborderfloatingfix
-* dwm-fakefullscreen
+N/A - clean build
 
 installation
 ------------
