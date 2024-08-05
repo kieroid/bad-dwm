@@ -11,6 +11,7 @@ patches
 ------------
 * dwm-status2d-systray
 * dwm-combo
+* dwm-alpha
 
 installation
 ------------
