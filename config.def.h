@@ -121,7 +121,7 @@ static const Key keys[] = {
 	{ 0, 				XF86XK_AudioPlay, 		spawn, 		{.v = medplaypausecmd } },
 	{ 0, 				XF86XK_AudioNext, 		spawn, 		{.v = mednextcmd } },
 	{ 0, 				XF86XK_AudioPrev, 		spawn, 		{.v = medprevcmd } },
-	{ 0,				XF86XK_WWW, 		spawn, 		{.v = rotatescreen } },
+	{ 0,				XF86XK_HomePage, 		spawn, 		{.v = rotatescreen } },
 	{ 0,				XF86XK_TaskPane, 		spawn, 		{.v = togglekeys } },
 };
 
