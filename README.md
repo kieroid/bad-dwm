@@ -16,6 +16,7 @@ patches
 * dwm-restartsig
 * dwm-centretitle
 * dwm-cyclelayouts
+* dwm-noborderfloatingfix
 
 installation
 ------------
