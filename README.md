@@ -9,7 +9,11 @@ screenshot
 
 patches
 ------------
-N/A - clean build
+* dwm-alpha
+* dwm-cfacts-vanitygaps
+* dwm-exitmenu
+* dwm-centretile
+* dwm-combo
 
 installation
 ------------
