@@ -14,6 +14,7 @@ patches
 * dwm-exitmenu
 * dwm-centretile
 * dwm-combo
+* dwm-restartsig
 
 installation
 ------------
