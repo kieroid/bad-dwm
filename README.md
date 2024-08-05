@@ -12,6 +12,7 @@ patches
 * dwm-status2d-systray
 * dwm-combo
 * dwm-alpha
+* dwm-cfacts-vanitygaps
 
 installation
 ------------
