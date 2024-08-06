@@ -32,7 +32,7 @@ static const int lockfullscreen		= 0;		/* 1 will force focus on the fullscreen w
 static const unsigned int borderpx = 1;
 
 /* rules */
-static const char *colors[][3]      = { [SchemeNorm] = { col_w, col_b, col_g }, [SchemeSel]  = { col_b, col_w,  col_w }, [SchemeStatus]={ col_w, col_b,  NULL  } }; 
+static const char *colors[][3]      = { [SchemeNorm] = { col_w, col_b, col_g }, [SchemeSel]  = { col_b, col_w,  col_r }, [SchemeStatus]={ col_w, col_b,  NULL  } }; 
 static const unsigned int alphas[][3]      = { [SchemeNorm] = { OPAQUE, baralpha, borderalpha }, [SchemeSel]  = { OPAQUE, baralpha, borderalpha }, [SchemeStatus]={ OPAQUE, baralpha, borderalpha  } };
 static const Rule rules[] = { 
 	{ "krita", NULL, NULL, 0, 1, -1 }
