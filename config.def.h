@@ -8,6 +8,10 @@ static const char dmenufont[]		= "monospace:size=10";		/* dmenu font */
 static const char col_b[]		= "#000000";			/* black color */
 static const char col_g[]		= "#555555";			/* grey color */
 static const char col_w[]		= "#ffffff";			/* white color */
+static const char col_re[]		= "#aa0000";			/* red color */
+static const char col_gr[]		= "#00aa00";			/* green color */
+static const char col_bl[]		= "#0000ff";			/* blue color */
+static const char col_ye[]		= "#ffff00";			/* yellow color */
 static const unsigned int baralpha	= 0xd0;				/* transparency */
 static const unsigned int borderalpha	= OPAQUE;			/* border transparency */
 
@@ -28,8 +32,8 @@ static const int lockfullscreen		= 0;		/* 1 will force focus on the fullscreen w
 static const unsigned int borderpx = 1;
 
 /* rules */
-static const char *colors[][3]      = { [SchemeNorm] = { col_w, col_b, col_g }, [SchemeSel]  = { col_b, col_w,  col_w  } }; 
-static const unsigned int alphas[][3]      = { [SchemeNorm] = { OPAQUE, baralpha, borderalpha }, [SchemeSel]  = { OPAQUE, baralpha, borderalpha } };
+static const char *colors[][3]      = { [SchemeNorm] = { col_w, col_b, col_g }, [SchemeSel]  = { col_b, col_w,  col_r }, [SchemeStatus]={ col_w, col_b,  NULL  } }; 
+static const unsigned int alphas[][3]      = { [SchemeNorm] = { OPAQUE, baralpha, borderalpha }, [SchemeSel]  = { OPAQUE, baralpha, borderalpha }, [SchemeStatus]={ OPAQUE, baralpha, borderalpha  } };
 static const Rule rules[] = { 
 	{ "krita", NULL, NULL, 0, 1, -1 }
 };
@@ -53,6 +57,20 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },
 	{ NULL,       NULL },
 };
+
+/* status bar */
+static const Block blocks[] = {
+	/* fg     	command                         interval        signal */
+	{ col_ye,	"special_disk",			9000,		1},
+	{ col_bl,	"special_vol",			0,		2},
+	{ col_gr,	"special_mem",			0,		3},
+	{ col_re,	"special_battery",		10,		4},
+	{ col_w,	"special_date",			20,		5}
+};
+
+#define INVERSED       0
+static char delimiter[] = " ";
+#define CMDLENGTH      50
 
 /* key definitions */
 #define MODKEY Mod4Mask
@@ -134,6 +152,12 @@ static const Button buttons[] = {
 	{ ClkTagBar,            	MODKEY,         Button3,        toggletag,      {0} },
 	{ ClkWinTitle,          	0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        	0,              Button2,        spawn,          {.v = termcmd } },
+	{ ClkStatusText,        0,              Button1,        sendstatusbar,   {.i = 1 } },
+	{ ClkStatusText,        0,              Button2,        sendstatusbar,   {.i = 2 } },
+	{ ClkStatusText,        0,              Button3,        sendstatusbar,   {.i = 3 } },
+	{ ClkStatusText,        0,              Button4,        sendstatusbar,   {.i = 4 } },
+	{ ClkStatusText,        0,              Button5,        sendstatusbar,   {.i = 5 } },
+	{ ClkStatusText,        ShiftMask,      Button1,        sendstatusbar,   {.i = 6 } },
 	{ ClkClientWin,         	MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         	MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         	MODKEY,         Button3,        resizemouse,    {0} },

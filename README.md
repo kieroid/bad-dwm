@@ -20,6 +20,7 @@ patches
 * dwm-launchers
 * dwm-warp
 * dwm-noborderfloatingfix
+* dwm-integrated-status-text
 
 installation
 ------------
