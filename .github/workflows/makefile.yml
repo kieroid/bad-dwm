@@ -1,0 +1,15 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "latest" ]
+  pull_request:
+    branches: [ "latest" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: fing9/42Cursus-Makefile-Test@v3.0.2
