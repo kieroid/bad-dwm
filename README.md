@@ -4,7 +4,7 @@ simple fork of dwm-6.5 with the patches that i used pre-applied.
 
 screenshot
 ----------
-(DOES NOT EXIST FOR 6.5 YET!) ![dwm-patched](example.png?raw=true)
+![dwm-patched](example.png?raw=true)
 
 
 patches
