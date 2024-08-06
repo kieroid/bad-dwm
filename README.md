@@ -16,6 +16,8 @@ patches
 * dwm-combo
 * dwm-restartsig
 * dwm-fakefullscreen
+* dwm-cyclelayouts
+* dwm-launchers
 
 installation
 ------------
