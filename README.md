@@ -19,6 +19,7 @@ patches
 * dwm-cyclelayouts
 * dwm-launchers
 * dwm-warp
+* dwm-noborderfloatingfix
 
 installation
 ------------
