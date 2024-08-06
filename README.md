@@ -18,6 +18,7 @@ patches
 * dwm-fakefullscreen
 * dwm-cyclelayouts
 * dwm-launchers
+* dwm-warp
 
 installation
 ------------
