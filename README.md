@@ -15,6 +15,7 @@ patches
 * dwm-centretile
 * dwm-combo
 * dwm-restartsig
+* dwm-fakefullscreen
 
 installation
 ------------
