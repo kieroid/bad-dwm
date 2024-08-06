@@ -10,7 +10,8 @@ static const char col_g[]		= "#555555";			/* grey color */
 static const char col_w[]		= "#ffffff";			/* white color */
 static const char col_re[]		= "#aa0000";			/* red color */
 static const char col_gr[]		= "#00aa00";			/* green color */
-static const char col_bl[]		= "#0000aa";			/* blue color */
+static const char col_bl[]		= "#0000ff";			/* blue color */
+static const char col_ye[]		= "#ffff00";			/* yellow color */
 static const unsigned int baralpha	= 0xd0;				/* transparency */
 static const unsigned int borderalpha	= OPAQUE;			/* border transparency */
 
@@ -60,7 +61,7 @@ static const Layout layouts[] = {
 /* status bar */
 static const Block blocks[] = {
 	/* fg     	command                         interval        signal */
-	{ col_w,	"special_disk",			9000,		1},
+	{ col_ye,	"special_disk",			9000,		1},
 	{ col_bl,	"special_vol",			0,		2},
 	{ col_gr,	"special_mem",			0,		3},
 	{ col_re,	"special_battery",		10,		4},
