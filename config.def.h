@@ -12,6 +12,7 @@ static const char col_re[]		= "#aa0000";			/* red color */
 static const char col_gr[]		= "#00aa00";			/* green color */
 static const char col_bl[]		= "#0000ff";			/* blue color */
 static const char col_ye[]		= "#ffff00";			/* yellow color */
+static const char col_rr[]		= "#ff0000";			/* bright red color */
 static const unsigned int baralpha	= 0xd0;				/* transparency */
 static const unsigned int borderalpha	= OPAQUE;			/* border transparency */
 
@@ -49,7 +50,7 @@ static const char *tagsel[][2] = {
 	{ col_w, col_b }, /* norm */
 	{ col_b, col_w }, /* sel */
 	{ col_b, col_g }, /* occ but not sel */
-	{ col_b, col_re }, /* has pinned tag */
+	{ col_b, col_rr }, /* has pinned tag */
 };
 
 
