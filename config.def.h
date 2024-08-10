@@ -44,6 +44,15 @@ static const unsigned int alphas[][3]      = {
 	[SchemeStatus]={ OPAQUE, baralpha, borderalpha } 
 };
 
+static const char *tagsel[][2] = {
+	/*   fg         bg    */
+	{ col_w, col_b }, /* norm */
+	{ col_b, col_w }, /* sel */
+	{ col_b, col_g }, /* occ but not sel */
+	{ col_b, col_re }, /* has pinned tag */
+};
+
+
 static const Rule rules[] = { 
 	{ "krita", NULL, NULL, 0, 1, -1 }
 };

@@ -22,6 +22,7 @@ patches
 * dwm-warp
 * dwm-noborderfloatingfix
 * dwm-integrated-status-text
+* dwm-tagcolorscheme
 
 installation
 ------------
