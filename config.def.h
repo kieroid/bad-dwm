@@ -1,6 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 #include <X11/XF86keysym.h>
+#define SESSION_FILE "/tmp/dwm-session"
 
 /* theme */
 static const char *fonts[]		= { "monospace:size=10" };	/* dwm font */
