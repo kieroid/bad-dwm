@@ -11,13 +11,15 @@ patches
 ------------
 * dwm-alpha
 * dwm-cfacts-vanitygaps
+* dwm-cyclelayouts
 * dwm-exitmenu
 * dwm-centretile
 * dwm-combo
 * dwm-dwmc (xsetroot required)
 * dwm-restartsig
+* dwm-refreshrate
 * dwm-fakefullscreen
-* dwm-cyclelayouts
+* dwm-restoreafterrestart
 * dwm-launchers
 * dwm-warp
 * dwm-noborderfloatingfix
