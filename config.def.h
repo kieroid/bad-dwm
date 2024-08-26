@@ -85,7 +85,7 @@ static const Layout layouts[] = {
 /* status bar */
 static const Block blocks[] = {
 	/* fg     	command                         interval        signal */
-	{ col_yw,	"special_vol",			0,		0},
+	{ col_yw,	"special_vol",			1,		0},
 	{ col_bl,	"special_disk",			9000,		1},
 	{ col_gr,	"special_mem",			0,		3},
 	{ col_re,	"special_battery",		10,		4},
