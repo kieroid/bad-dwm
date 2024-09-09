@@ -14,6 +14,7 @@ static const char col_re[]		= "#aa0000";			/* red color */
 static const char col_gr[]		= "#00aa00";			/* green color */
 static const char col_bl[]		= "#0000ff";			/* blue color */
 static const char col_rr[]		= "#ff0000";			/* bright red color */
+static const char col_or[]		= "#ffaa00";			/* orange-ish color */
 static const unsigned int baralpha	= 0xd0;				/* transparency */
 static const unsigned int borderalpha	= OPAQUE;			/* border transparency */
 
@@ -85,9 +86,10 @@ static const Layout layouts[] = {
 /* status bar */
 static const Block blocks[] = {
 	/* fg     	command                         interval        signal */
-	{ col_yw,	"special_vol",			1,		0},
-	{ col_bl,	"special_disk",			9000,		1},
-	{ col_gr,	"special_mem",			0,		3},
+	{ col_or,	"special_micvol",		1,		0},
+	{ col_yw,	"special_vol",			1,		1},
+	{ col_bl,	"special_disk",			9000,		2},
+	{ col_gr,	"special_mem",			5,		3},
 	{ col_re,	"special_battery",		10,		4},
 	{ col_w,	"special_date",			20,		5}
 };
@@ -134,6 +136,7 @@ static const Launcher launchers[] = {
 #include "exitdwm.c"
 static const Key keys[] = {
 	/* modifier                     key				function        argument */
+	{ MODKEY,			XK_b,				togglebar,	{0} },
 	{ MODKEY,                       XK_r,      			spawn,          {.v = dmenucmd } },
 	{ MODKEY,	                XK_Return, 			spawn,          {.v = termcmd } },
 	{ MODKEY, 	                XK_Right,  			focusstack,     {.i = +1 } },
