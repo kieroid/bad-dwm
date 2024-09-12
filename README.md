@@ -14,6 +14,7 @@ patches
 * dwm-cyclelayouts
 * dwm-exitmenu
 * dwm-centretile
+* dwm-cmdcustomize
 * dwm-combo
 * dwm-dwmc (xsetroot required)
 * dwm-restartsig
