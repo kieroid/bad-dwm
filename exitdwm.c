@@ -21,12 +21,12 @@ void exitdwm ()
 # error (conflicting macro names)
 # endif
 
-# define S_LOCK "Lock"
-# define S_RESTART_DWM "restart Dwm"
-# define S_OFFSCREEN "Off-screen"
-# define S_EXIT "Exit"
-# define S_REBOOT "Reboot"
-# define S_SHUTDOWN "Shutdown"
+# define S_LOCK "lock"
+# define S_RESTART_DWM "restart dwm"
+# define S_OFFSCREEN "off-screen"
+# define S_EXIT "exit"
+# define S_REBOOT "reboot"
+# define S_SHUTDOWN "shutdown"
 # define S_LOCK_ICON "\uf023"			// <= FontAwesome icons
 # define S_RESTART_DWM_ICON "\uf01e"
 # define S_OFFSCREEN_ICON "\uf108"
@@ -64,8 +64,8 @@ void exitdwm ()
 	else if (strcmp (exit_action, S_RESTART_DWM) == 0) quit (& (const Arg) {1});
 	else if (strcmp (exit_action, S_OFFSCREEN) == 0) system ("sleep .5; xset dpms force off");
 	else if (strcmp (exit_action, S_EXIT) == 0) quit (& (const Arg) {0});
-	else if (strcmp (exit_action, S_REBOOT) == 0) system ("sudo systemctl reboot");
-	else if (strcmp (exit_action, S_SHUTDOWN) == 0) system ("sudo systemctl poweroff");
+	else if (strcmp (exit_action, S_REBOOT) == 0) system ("sudo loginctl reboot now");
+	else if (strcmp (exit_action, S_SHUTDOWN) == 0) system ("sudo loginctl poweroff now");
 
 close_streams:
 	pclose (exit_menu);
