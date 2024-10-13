@@ -36,4 +36,4 @@ LDFLAGS  = ${LIBS}
 #LDFLAGS = ${LIBS}
 
 # compiler and linker
-CC = gcc-13
+CC = gcc
