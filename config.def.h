@@ -167,7 +167,7 @@ static const Key keys[] = {
 	{ 0, 				XF86XK_AudioNext, 		spawn, 		{.v = mednextcmd } },
 	{ 0, 				XF86XK_AudioPrev, 		spawn, 		{.v = medprevcmd } },
 	{ 0,				XF86XK_HomePage, 		spawn, 		{.v = rotatescreen } },
-	{ 0,				XF86XK_TaskPane, 		spawn, 		{.v = togglekeys } },
+	{ 0,				XF86XK_Calculator, 		spawn, 		{.v = togglekeys } },
 };
 
 /* button definitions */
